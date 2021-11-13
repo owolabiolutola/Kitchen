@@ -14,8 +14,24 @@
           transform: translate(-50%) rotate(calc(var(--rotation) * 1deg)) !important;
       }
 
+    
       
   </style>
+
+<style>
+    #clock::after {
+        content:'';
+        position:absolute;
+        background-color:black;
+        z-index:11;
+        width:15px;
+        height:15px;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        border-radius: 50%;
+    }
+</style>
 
 </head>
 
@@ -29,7 +45,7 @@
         
     <!---clock------>
 
- <div class="w-80 h-80 bg-white bg-opacity-50 rounded-full border-2 border-black relative " > 
+ <div class="w-80 h-80 bg-white bg-opacity-50 rounded-full border-2 border-black relative " id="clock" > 
 
 
        
@@ -86,10 +102,7 @@
 
      <!---Circle in the middle of the clock------>
 <div>              
-         <div class=" absolute ::after bottom-1/2 left-1/2 border-white border-1  z-11 bg-black rounded-full w-4 h-4 transform -translate-x-1/2 "></div>
   
-          
-
     <!---Hands of the clock------>
 
 <div>
