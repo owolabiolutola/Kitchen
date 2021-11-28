@@ -1,23 +1,38 @@
-setInterval(setClock,1000)
-
-const hourHand =document.querySelector ('[data-hour-hand]')
-const minuteHand =document.querySelector ('[data-minute-hand]')
-const secondHand =document.querySelector ('[data-second-hand]')
 
 
-function setClock(){
-    const currentDate = new Date()
-    const secondsRatio  = currentDate.getSeconds() /60
-    const minutesRatio = (secondsRatio + currentDate.getMinutes()) /60
-    const hoursRatio = (minutesRatio + currentDate.getHours())/12
+const countdown = ()  => {
+const countDate = new Date ("Dec 25, 2021 00:00:00").getTime();
+const now = new Date ().getTime();
+const gap = countDate - now;
 
-setRotation(secondHand, secondsRatio)
-setRotation(minuteHand, minutesRatio)
-setRotation(hourHand, hoursRatio)
-}
- 
-function setRotation(element, rotationRatio){
-element.style.setProperty('--rotation',rotationRatio *360)
-}
+//how does it work?
+const second = 1000;
+const minute =second * 60;
+const hour = minute * 60;
+const day = hour *24;
 
-setClock()
+
+
+//calculate
+
+const textDay = Math.floor (gap / day);
+const textHour = Math.floor ((gap % day) / hour); 
+const textMinute = Math.floor ((gap % hour) / minute);
+const textSecond = Math.floor((gap % minute) / second);
+
+document.getElementById("day").innerText= textDay;
+
+document.getElementById("hour").innerText= textHour;
+
+document.getElementById("minute").innerText= textMinute;
+
+document.getElementById("second").innerText= textSecond;
+
+};  
+
+
+
+
+
+setInterval(countdown,1000);
+

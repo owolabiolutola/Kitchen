@@ -6562,6 +6562,10 @@ root{
   min-height: 100vh;
 }
 
+.min-h-1\/2 {
+  min-height: 50%;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -38156,6 +38160,10 @@ root{
     min-height: 100vh;
   }
 
+  .sm\:min-h-1\/2 {
+    min-height: 50%;
+  }
+
   .sm\:w-0 {
     width: 0px;
   }
@@ -69330,6 +69338,10 @@ root{
 
   .md\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .md\:min-h-1\/2 {
+    min-height: 50%;
   }
 
   .md\:w-0 {
@@ -100508,6 +100520,10 @@ root{
     min-height: 100vh;
   }
 
+  .lg\:min-h-1\/2 {
+    min-height: 50%;
+  }
+
   .lg\:w-0 {
     width: 0px;
   }
@@ -131684,6 +131700,10 @@ root{
     min-height: 100vh;
   }
 
+  .xl\:min-h-1\/2 {
+    min-height: 50%;
+  }
+
   .xl\:w-0 {
     width: 0px;
   }
@@ -162858,6 +162878,10 @@ root{
 
   .\32xl\:min-h-screen {
     min-height: 100vh;
+  }
+
+  .\32xl\:min-h-1\/2 {
+    min-height: 50%;
   }
 
   .\32xl\:w-0 {

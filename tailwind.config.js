@@ -30,7 +30,11 @@ module.exports = {
     extend: {
      width:{ '300':'300px', 
      '3.75':'0.9375rem',
-       },   },
+       },
+      minHeight:{
+   '1/2':'50%',
+      },
+      },
   },
   variants: {
     extend: {},
